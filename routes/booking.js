@@ -36,12 +36,15 @@
 
 
 const express = require("express");
+const path = require('path');
 const app = express();
 const bodyParser = require("body-parser");
 require("../db");
 const Order = require("../models/BookingData");
 
 app.use(bodyParser.urlencoded({ extended: true }));
+const bookpath=path.join(__dirname,'../public');
+app.use(express.static(bookpath ));
 
 app.post("/Book", async (req, res) => {
   const formData = req.body;
@@ -49,10 +52,10 @@ app.post("/Book", async (req, res) => {
   try {
     await Order.create(formData);
     console.log("Form data stored successfully");
-    res.send("success");
+    res.sendFile(path.join( bookpath,'greetings.html'));
   } catch (err) {
     console.error(err);
-    res.status(500).send("Error storing form data");
+    res.status(500).sendFile("Error storing form data");
   }
 });
 

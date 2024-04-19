@@ -309,12 +309,11 @@ background: white;
     margin-left: 1rem;
 }
 
-form a{
-    margin-top:20px;
-}
 
 form button{
-    padding-top:0px;
+    margin-top:20px;
+    padding-bottom:20px;
+    width:100%;
     border:none;
     color:#fff;
     font-size: 20px;

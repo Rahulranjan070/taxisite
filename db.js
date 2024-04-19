@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-mongoose.connect("mongodb://localhost:27017/taxiSite",{
+mongoose.connect("mongodb+srv://rahul:rahul1245@rahulranjan07.sre6gnp.mongodb.net/",{
     useNewUrlParser: true,
     useUnifiedTopology: true,
 });
