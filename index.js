@@ -4,10 +4,10 @@ const path = require("path");
 
 const app = express();
 
-const loginData = require("../taxi site/routes/routes");
-const routeRouter = require("../taxi site/routes/app");
-const bookingData = require("../taxi site/routes/booking")
-const contactData = require("../taxi site/routes/contact")
+const loginData = require("./routes/routes");
+const routeRouter = require("./routes/app");
+const bookingData = require("./routes/booking");
+const contactData = require("./routes/contact");
 
 
 app.use(loginData);
